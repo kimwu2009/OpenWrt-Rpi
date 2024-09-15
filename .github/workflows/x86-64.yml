@@ -296,7 +296,7 @@ jobs:
           cd $OPENWRT_ROOT_PATH
           chmod +x $GITHUB_WORKSPACE/scripts/*.sh
           $GITHUB_WORKSPACE/$DIY_SH
-        #  $GITHUB_WORKSPACE/scripts/preset-clash-core.sh $CLASH_BINARY_PLATFORM
+#          $GITHUB_WORKSPACE/scripts/preset-clash-core.sh $CLASH_BINARY_PLATFORM
           $GITHUB_WORKSPACE/scripts/preset-terminal-tools.sh
           make defconfig
 
@@ -333,10 +333,10 @@ jobs:
             cmake .
             make
             sudo mv usign /bin
-        #    mkdir -p $OPENWRT_ROOT_PATH/files/etc/opkg/keys
-        #    cd $OPENWRT_ROOT_PATH/files/etc/opkg/keys
-        #    wget -q https://openwrt.cc/keys/key-build.pub
-        #    mv key-build.pub $(usign -F -p key-build.pub)
+#            mkdir -p $OPENWRT_ROOT_PATH/files/etc/opkg/keys
+#            cd $OPENWRT_ROOT_PATH/files/etc/opkg/keys
+#            wget -q https://openwrt.cc/keys/key-build.pub
+#            mv key-build.pub $(usign -F -p key-build.pub)
           fi
           cd $OPENWRT_ROOT_PATH
           mkdir -p files/etc/uci-defaults/
